@@ -1,0 +1,3 @@
+Let's say we have the vector (1,0) so the rotation matrix maps the x-basis vector (1,0) to (cos(90), sin(90))=(0,1)
+So if y-axis is pointing downward, the the vector rotates clockwise from right to down.
+And if y-axis is pointing upward, the the vector rotates counterclockwise from right to up.

@@ -1,0 +1,13 @@
+1. Since size of the screen is 800x600, the rectangle with size half the screen dimension
+would be 400x300, centered at (400, 300). The corners of the rect would then be (200,150),
+(600,150), (600, 450) and (200,450)
+- Triangle top left half: (200,150), (200,450), (600,150)
+- Triangle bottom right half: (600,150), (200,450), (600, 450)
+
+2. We can store 4 unique vertices once (each has 2 floats) and use 6 indices to define the 
+two triangles. With float and indices both 4 bytes, this uses 4*2*4+6*4=56 bytes, while 
+6*2*4=48 bytes without indexing. So in this case indexing uses more memory
+But for doubles, its 4*2*8+6*4=88 bytes while 6*2*8=96 so indexing in this case saves 8 bytes
+
+3. Normalized UV coordinates u = (500-200)/400 = 0.75 and v = (301-150)/300 ~= 0.5033
+So UV coordinates (0.75,0.5033)
